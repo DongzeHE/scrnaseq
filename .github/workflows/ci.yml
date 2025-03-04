@@ -72,6 +72,12 @@ jobs:
         with:
           version: ${{ env.NFT_VER }}
 
+      - uses: actions/checkout@v4
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
+
       - name: Run nf-test
         run: |
           nf-test test \
