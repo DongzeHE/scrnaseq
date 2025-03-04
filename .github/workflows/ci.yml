@@ -78,6 +78,7 @@ jobs:
         with:
           detached: true
 
+
       - name: Run nf-test
         run: |
           nf-test test \
